@@ -5,6 +5,8 @@ from table import startTable
 from tags import *
 from write import *
 
+c = '<code>'
+cc = '</code>'
 
 if __name__ == "__main__":
 
@@ -241,6 +243,43 @@ if __name__ == "__main__":
 
         '''
 
+    writeHTML(text)
+    closeTags('pre', 'div')
+
+    m = tTags(div_class='image')
+    m.start_div()
+
+    openTags('pg_title')
+    writeHTML(f'''Adding images''')
+    closeTags('pg_title')
+    a.start_p(f'''Images can be added using <code>class addImg()</code> which takes in four arguments: {c}src{cc}, {c}href{cc}, {c}alt{cc} and {c}img_class{cc}, arg {c}src{cc} being mandatory, as it is the location of the image. {c}href{cc} if used, links the image to any specified location on click. {c}alt{cc} is the alternate text that is displayed if for some reason, the image is not displayed. {c}img_class{cc} is the class of the image, which is recommended if there are multiple images and multiple combinations of styling are needed.''', True)
+
+    openTags('pre')
+    text = f'''
+    a = addImg("location/to/the/image.jpeg", href="https://google.com", alt="Some image", img_class="newImg")
+
+    a.show()                    # Takes no argument and displays the image with the conditions given
+
+    a.css(height='30px', width='20px')
+
+    # It is recommended to use arg img_class if multiple combinations of styling is used for multiple images
+
+    a.css(self, height='False', width='False', margin='False', vertical_align='False', display='False', border='False', margin_top='False', {b}margin_bottom='False', margin_left='False', margin_right='False', opacity=False, {b}filter='False')
+
+    margin_top (str, optional)       : CSS image margin-top parameter. Defaults to 'False'.
+    margin_bottom (str, optional)    : CSS image margin-bottom parameter. Defaults to 'False'.
+    margin_left (str, optional)      : CSS image margin-left parameter. Defaults to 'False'.
+    margin_right (str, optional)     : CSS image margin-right parameter. Defaults to 'False'.
+    border (str, optional)           : CSS image border parameter. Defaults to 'False'.
+    display (str, optional)          : CSS image display parameter. Defaults to 'block'.
+    height (str, optional)           : CSS image height parameter. Defaults to False.
+    width (str, optional)            : CSS image width parameter. Defaults to False.
+    margin (str, optional)           : CSS image margin parameter. Defaults to False.
+    vertical-align (str, optional)   : CSS image vertical-align parameter. Defaults to False.
+    opacity (int/float, optional)    : CSS image opacity parameter. Defaults to False.
+    filter (str, optional)           : CSS image filter parameter. Defaults to False.
+
+    '''
     writeHTML(text)
     closeTags('pre', 'div')
 
