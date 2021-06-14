@@ -256,6 +256,7 @@ if __name__ == "__main__":
 
     openTags('pre')
     text = f'''
+    
     a = addImg("location/to/the/image.jpeg", href="https://google.com", alt="Some image", img_class="newImg")
 
     a.show()                    # Takes no argument and displays the image with the conditions given
