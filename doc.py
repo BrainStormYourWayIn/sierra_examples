@@ -5,8 +5,6 @@ from table import startTable
 from tags import *
 from write import *
 
-c = '<code>'
-cc = '</code>'
 
 if __name__ == "__main__":
 
