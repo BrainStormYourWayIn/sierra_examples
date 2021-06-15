@@ -13,6 +13,7 @@ if __name__ == "__main__":
     title('Documentation - Sierra -- 1.0.0')
     addFont(font_link='https://fonts.googleapis.com/css2?family=Prompt:wght@300&display=swap')
     addFont("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap")
+    addFont("https://fonts.googleapis.com/css2?family=Oswald&display=swap")
     x = addImg(src="white_sierra.JPG", alt="Sierra logo_white", img_class="logo", href="https://github.com/BrainStormYourWayIn/sierra")
     x.show()
     x.css(margin_left='35%', margin_top='0px')
@@ -22,12 +23,15 @@ if __name__ == "__main__":
     # a = tTags(True)
     # a.start_p('<a href="https://google.com">This link</a>, <a href="https://youtube.com">Another one</a>')
 
-    head('Documentation - Sierra -- 1.0.0', font_size='30px', color='blue', text_align='left', font_family="'Prompt', sans-serif")
-    openBody(background_color='white', opacity=0.8)
-
     a = tTags(True)
-    a.start_p(f'''Welcome to Sierra's documentation. The installation process is pretty simple, and is explained in the README of <a href="https://github.com/BrainStormYourWayIn/sierra">Sierra's GitHub</a> page.{b} <code>pip install sierra</code> can be done as a simpler way of installing. Any contributions to this project can also be made on the same page. {b}{b} Please view our <a href="https://www.apache.org/licenses/LICENSE-2.0">LICENSE</a> before moving forward.''')
     a.css(color='black', font_family="'Roboto Mono', monospace")
+    a.start_p(f'''This is the documentation of Sierra - A lightweight Python3 framework for building and integrating web applications. Sierra has functions to convert
+    your Python code to HTML and style it! The documentation will elaborate on the syntax for this. In future releases, integration with Flask will be available, and support will be extended for <a href="https://brython.info/static_doc/en/intro.html">brython over JS</a>.''', True)
+
+    head('Documentation - Sierra -- 1.0.0', font_size='30px', color='blue', text_align='left', font_family="'Prompt', sans-serif")
+    openBody(background_color='white', opacity=0.8)    
+    a.start_p(f'''Welcome to Sierra's documentation. The installation process is pretty simple, and is explained in the README of <a href="https://github.com/BrainStormYourWayIn/sierra">Sierra's GitHub</a> page.{b} <code>pip install sierra</code> can be done as a simpler way of installing. Any contributions to this project can also be made on the same page. {b}{b} Please view our <a href="https://github.com/BrainStormYourWayIn/sierra/blob/main/LICENSE">LICENSE</a> before moving forward.''')
+    
 
     m = tTags(div_class='starting_off')
     m.start_div()
@@ -336,6 +340,65 @@ if __name__ == "__main__":
     a.css(border=False, width=False, height=False, border_collapse=False, color='black',
     font_family="Arial", font_weight=False, text_align=False, font_size=False, margin=False,
     background_color='white')
+
+    '''
+    writeHTML(text)
+    closeTags('pre', 'div')
+
+    m = tTags(div_class='other_funcs')
+    m.start_div()
+
+    openTags('pg_title')
+    writeHTML(f'''Other functions''')
+    closeTags('pg_title')
+    a.start_p(f'''These are a list of other functions that can be used''', True)
+
+    openTags('pre')
+    text = f'''
+    
+    autoPrettify()
+    # Improve overall look of code and close all tags automatically (if not already done)
+    
+    href(link:str, text:str)
+    # Links any text to a specified location
+
+    code(codeblock:str)
+    # Shows any given text inside as code
+
+    writeHTML(text)
+    # Enters any text inside into the web application
+
+    writeCSS(tag, *args)
+    # Enters custom CSS arguments into any given tag
+
+    # writeCSS('marquee', {{"font-size": "15px", "background-color": "whitesmoke"}})
+
+    closeHTML()
+    # Closes the HTML tag
+
+    '''
+    writeHTML(text)
+    closeTags('pre', 'div')
+
+    m = tTags(div_class='copyrights')
+    m.start_div()
+
+    openTags('copyrights')
+    writeHTML(f'''Copyright Licenses Used''')
+    closeTags('copyrights')
+    b = cTags('copyrights')
+    b.css(font_family="'Oswald', sans-serif;", margin_top="35px", font_size="25px")
+    
+    openTags('pre')
+    text = f'''
+
+Pandas (pandas) -- table
+
+
+Copyright (c) 2008-2011, AQR Capital Management, LLC, Lambda Foundry, Inc. and PyData Development Team
+All rights reserved.
+
+Copyright (c) 2011-2020, Open source contributors.
 
     '''
     writeHTML(text)
