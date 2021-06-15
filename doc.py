@@ -79,12 +79,14 @@ if __name__ == "__main__":
     writeHTML(text)
     closeTags('pre')
 
-    a.start_p(f'''Font links can be added using addFont(font_link)''')
+    a.start_p(f'''The body of your web application which contains the main content can be started with {c}openBody(){cc}, and it can be styled using optional arguments. {b}{b}
+    {c}openBody(background='False', background_color='white', background_image=False, opacity=False, background_size='cover', background_attachment='fixed', background_position=False, background_repeat=False){cc}{b}{b}It can similarly be closed using {c}closeBody(){cc} which takes no arguments.{b}{b}Initialization of CSS can be done using addInitc() and it is not mandatory.{b}{b}{c}addInitc(box_sizing='False', margin=False, padding=False, border=False, position='relative'){cc}{b}{b}Font links can be added using addFont(font_link)''')
     openTags('pre')
 
     text = f'''
 
     addFont(font_link="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap")
+
     # addFont() takes in one argument, which is the font link. It is the href to the font specified.
     # If the font is being taken from Google Fonts, copy only the href.
     # For example if the embed for the font 'Roboto' is &lt;link href="https://fonts.googleapis.com/css2
@@ -280,6 +282,60 @@ if __name__ == "__main__":
     vertical-align (str, optional)   : CSS image vertical-align parameter. Defaults to False.
     opacity (int/float, optional)    : CSS image opacity parameter. Defaults to False.
     filter (str, optional)           : CSS image filter parameter. Defaults to False.
+
+    '''
+    writeHTML(text)
+    closeTags('pre', 'div')
+
+    m = tTags(div_class='tables')
+    m.start_div()
+
+    openTags('pg_title')
+    writeHTML(f'''Adding a table (pandas supported)''')
+    closeTags('pg_title')
+    a.start_p(f'''Adding a table could never have been easier with {c}class startTable(){cc} which takes no arguments and has objects {c}createTable{cc} and {c}getTable(){cc}. {b}Sierra is compatible with Pandas, meaning just enter enter the path to the CSV file in {c}arg dataframe{cc} in {c}getTable(){cc}, and the table will display!''', True)
+
+    openTags('pre')
+    text = f'''
+    
+    a = startTable()
+    a.getTable("path/to/file.csv")
+
+    '''
+    writeHTML(text)
+    closeTags('pre')
+
+    a.start_p(f'''A table can also be added using {c}createTable(){cc}. It takes in two arguments: {c}cols:list{cc} and {c}rows{cc}, where {c}rows{cc} is a list of lists. {c}cols{cc} is a list that contains the header row, which is basically the title of each column. {c}rows{cc} is a list of lists that contains the rows to be entered''', True)
+
+    openTags('pre')
+    text = f'''
+    
+    a = startTable()
+    c = ['england', 'best', 'eight', 'euros']
+    r1 = ['kane', 'grealish', 'sancho', 'foden']
+    r2 = ['mount', 'rice', 'chilwell', 'stones']
+    r = [r1, r2]
+    a.createTable(cols=c, rows=r)
+
+    # Outputs table:
+
+    # england   best       eight     euros
+
+    # kane      grealish   sancho    foden
+    # mount     rice       chilwell  stones
+
+    '''
+    writeHTML(text)
+    closeTags('pre')
+
+    a.start_p(f'''Of course, CSS can be added with {c}a.css(){cc}''', True)
+
+    openTags('pre')
+    text = f'''
+    
+    a.css(border=False, width=False, height=False, border_collapse=False, color='black',
+    font_family="Arial", font_weight=False, text_align=False, font_size=False, margin=False,
+    background_color='white')
 
     '''
     writeHTML(text)
