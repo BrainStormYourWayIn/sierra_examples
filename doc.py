@@ -18,11 +18,7 @@ if __name__ == "__main__":
     x = addImg(src="white_sierra.JPG", alt="Sierra logo_white", img_class="logo", href="https://github.com/BrainStormYourWayIn/sierra")
     x.show()
     x.css(margin_left='35%', margin_top='0px')
-    
-    # a = tTags(div_class='other_pages')
-    # a.start_div()
-    # a = tTags(True)
-    # a.start_p('<a href="https://google.com">This link</a>, <a href="https://youtube.com">Another one</a>')
+   
 
     a = tTags(True)
     a.css(color='black', font_family="'Roboto Mono', monospace")
