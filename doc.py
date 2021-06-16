@@ -417,4 +417,4 @@ Copyright (c) 2011-2020, Open source contributors.
     closeBody()
     closeHTML()
     
-    autoPrettify()                                              
+    # autoPrettify()                                                   # See 'Other Functions'                       
