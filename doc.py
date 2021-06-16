@@ -34,7 +34,7 @@ if __name__ == "__main__":
     m.start_div()
 
     a.start_p(f'''First, let us import the library {b}{b}
-    <code>import sierra</code>{b}{b}
+    <code>from sierra import *</code>{b}{b}
     If Sierra is manually being cloned from the repository, do make sure to use <code>pip install -r requirements.txt</code>{b}{b}
     Once imported, the first two lines of syntax are mandatory.''', True)
     
