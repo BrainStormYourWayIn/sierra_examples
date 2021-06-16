@@ -1,9 +1,11 @@
-from cTags import cTags
-from main_htm import *
-from tTags import tTags
-from table import startTable
-from tags import *
-from write import *
+# from cTags import cTags
+# from main_htm import *                                # To be imported if the repo has been cloned and setup.py not used
+# from tTags import tTags
+# from table import startTable
+# from tags import *
+# from write import *
+
+import sierra
 
 c = '<code>'
 cc = '</code>'
