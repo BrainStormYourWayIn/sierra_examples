@@ -358,7 +358,11 @@ if __name__ == "__main__":
     text = f'''
     
     autoPrettify()
-    # Improve overall look of code and close all tags automatically (if not already done)
+    # Improve overall look of HTML code and close all tags automatically (if not already done)
+    # Warning: Auto prettifying also involves auto closing HTML tags which may not be accurate if not already closed and 
+    # are not recommended. Further development may run into issues. Please close tags manually if unsure.
+    # autoPrettify() at the moment seems to not work when sierra is pip installed. Hence please use this function 
+    # only if the repository is cloned. This will be recitified in future versions.
     
     href(link:str, text:str)
     # Links any text to a specified location
@@ -408,4 +412,4 @@ Copyright (c) 2011-2020, Open source contributors.
     closeBody()
     closeHTML()
     
-    autoPrettify()
+    autoPrettify()                                              
