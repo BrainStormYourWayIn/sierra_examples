@@ -377,6 +377,11 @@ if __name__ == "__main__":
     # Enters custom CSS arguments into any given tag
 
     # writeCSS('marquee', {{"font-size": "15px", "background-color": "whitesmoke"}})
+    # Output in style.css
+    # marquee {{
+    #  font-size: 15px;
+    #  background-color: whitesmoke;
+    #  }}
 
     closeHTML()
     # Closes the HTML tag
