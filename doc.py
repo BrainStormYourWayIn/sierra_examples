@@ -7,8 +7,8 @@
 
 import sierra
 
-c = '<code>'
-cc = '</code>'
+c = '<code>'                                            # As mentioned in the documentation, Python variables can be used in f-strings to be displayed on the 
+cc = '</code>'                                          # web application.
 
 if __name__ == "__main__":
 
