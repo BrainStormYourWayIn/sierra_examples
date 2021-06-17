@@ -11,7 +11,7 @@ cc = '</code>'                                          # web application.
 
 if __name__ == "__main__":
 
-    title('Documentation - Sierra -- 1.0.0')
+    title('Documentation - Sierra -- 1.0.1')
     addFont(font_link='https://fonts.googleapis.com/css2?family=Prompt:wght@300&display=swap')
     addFont("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap")
     addFont("https://fonts.googleapis.com/css2?family=Oswald&display=swap")
@@ -25,7 +25,7 @@ if __name__ == "__main__":
     a.start_p(f'''This is the documentation of Sierra - A lightweight Python3 framework for building and integrating web applications. Sierra has functions to convert
     your Python code to HTML and style it! The documentation will elaborate on the syntax for this. In future releases, integration with Flask will be available, and support will be extended for <a href="https://brython.info/static_doc/en/intro.html">brython over JS</a>.''', True)
 
-    head('Documentation - Sierra -- 1.0.0', font_size='30px', color='blue', text_align='left', font_family="'Prompt', sans-serif")
+    head('Documentation - Sierra -- 1.0.1', font_size='30px', color='blue', text_align='left', font_family="'Prompt', sans-serif")
     openBody(background_color='white', opacity=0.8)    
     a.start_p(f'''Welcome to Sierra's documentation. The installation process is pretty simple, and is explained in the README of <a href="https://github.com/BrainStormYourWayIn/sierra">Sierra's GitHub</a> page.{b} <code>pip install sierra</code> can be done as a simpler way of installing. Any contributions to this project can also be made on the same page. {b}{b} Please view our <a href="https://github.com/BrainStormYourWayIn/sierra/blob/main/LICENSE">LICENSE</a> before moving forward.''')
     
