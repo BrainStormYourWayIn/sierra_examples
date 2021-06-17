@@ -23,7 +23,7 @@ if __name__ == "__main__":
     a = tTags(True)
     a.css(color='black', font_family="'Roboto Mono', monospace")
     a.start_p(f'''This is the documentation of Sierra - A lightweight Python3 framework for building and integrating web applications. Sierra has functions to convert
-    your Python code to HTML and style it! The documentation will elaborate on the syntax for this. In future releases, integration with Flask will be available, and support will be extended for <a href="https://brython.info/static_doc/en/intro.html">brython over JS</a>.''', True)
+    your Python code to HTML and style it! The documentation will elaborate on the syntax for this. In future releases, integration with Flask will be available, and support might be extended for <a href="https://brython.info/static_doc/en/intro.html">brython over JS</a>''', True)
 
     head('Documentation - Sierra -- 1.0.1', font_size='30px', color='blue', text_align='left', font_family="'Prompt', sans-serif")
     openBody(background_color='white', opacity=0.8)    
