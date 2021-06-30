@@ -35,7 +35,7 @@ openBody()
 
 with div(div_class='python_out'):
     with open_tag('pg_title'):
-        writeWA('Working with Python Outputs, Loops and Functions')
+        writeWA('Working with Python Loops, Functions, Variables and Conditions')
     
     p(r'''Displaying Python outputs on your web applications are actually pretty simple with Sierra. 
     To work with this, you can use <code>writeWA()</code> or <code>p()</code> , which has been covered on the main page of the 
@@ -112,7 +112,87 @@ with div(div_class='img-map'):
     f-strings to enter in four different attributes to three different &lt;area> tags which all come under &lt;map>! 
     So instead of manually entering in every single tag and attribute, you've used Python's <code>list</code> 
     and <code>for loop</code> to get the job done.''')
-    p(f'''{br}{br}Similarly, use can use conditional statements and functions too''')
+
+with div(div_class='funcs'):
+
+    p(f'''With Sierra, using and displaying outputs of Python functions on your web application
+    is made easy as cake''')
+    p(f'''Here's an example of scraping a webpage with requests, given it's URL, and displaying 
+    all text within the &lt;p> tag: ''')
+
+    with open_tag('pre'):
+        writeWA(r'''
+        
+    from sierra import *
+    import re
+    import urllib3
+
+    def ExtractpText(url):
+
+        http = urllib3.PoolManager()
+        req = http.request('GET', url)
+        respData = RemoveThrashText(str(req.data))
+        regex = '&lt;p>(.*?)&lt;/p>'
+        paragraphs = re.findall(regex, respData)
+        return paragraph
+
+    title('Extracting text from the &lt;p> tag given a URL')
+    openBody()
+
+    writeWA("\n"ExtractpText("http://example.com/"))
+
+    autoPrettify()
+
+
+    # OR you could enclose it in a div/p/section/anything and style it, if you like
+
+
+    title('Extracting text from the &lt;p> tag given a URL')
+
+        # Font
+    addFont("https://fonts.googleapis.com/css2?family=Roboto&display=swap")
+
+    openBody(background_color="#161a21")
+
+    p(writeWA("\n"ExtractpText("http://example.com/")), attr="class='p_class'")
+
+        # CSS
+    with cTags('.p_class') as p_class:
+        p_class.css(color="#dfe3eb", font_family="'Roboto', sans-serif")
+
+    autoPrettify()
+
+        
+        ''')
+
+    p(f'''Simple as that! You just use <code>writeWA()</code> for getting the job done!
+    {br} Or you could just do <code>p(ExtractpText("http://example.com/"))</code>, both work''')
+    p(f'''Similarly, variables and conditional statements can be added too''')
+
+    with open_tag('pre'):
+        writeWA(r'''
+        
+    some_variable = 'doggo'
+
+    p(doggo)
+
+    # or use f-strings
+
+    p(f'This is my {some_variable}!')
+
+    # or use writeWA (even with f-strings, if the use case suits you)
+
+    if some_variable == 'dog':
+        writeWA(f'Grrr! This is NOT my {some_variable}')
+    else:
+        writeWA(f'Grrr! This is MY {some_variable}! I'd like you to come just a little closer.')
+
+        
+        ''')
+
 
 
 autoPrettify()
+
+# import webbrowser as wb
+# wb.open('index.html')
