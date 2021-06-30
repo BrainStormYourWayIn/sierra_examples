@@ -1,10 +1,4 @@
-from bullets_and_lists import *
-from cTags import *
-from main_htm import *
-from table import *
-from tags import *
-from tTags import *
-from write import *
+from sierra import *
 
 title('Documentation | Sierra - 2.0.0')
 
