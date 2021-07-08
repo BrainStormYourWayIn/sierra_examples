@@ -7,7 +7,7 @@ title('Documentation | Sierra - 2.0.0')
 # writeWA("\n"r'<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>')
 
 
-# CSS
+### CSS ###
 
 with cTags('p') as p_tag:
     p_tag.css(font_family="'Ubuntu', sans-serif;", line_height='28px')
@@ -33,6 +33,7 @@ with image('white_sierra.JPG', href="https://github.com/BrainStormYourWayIn/sier
 
 head('Documentation - Sierra v2.0.0', 'h1', font_family="'Titillium Web', sans-serif", 
     color="#1d37e0")
+
 openBody()
 
 with div(None, attr="id='first_up'"):
