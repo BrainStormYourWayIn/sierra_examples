@@ -1,6 +1,7 @@
 from sierra import *
 
-title('Documentation | Sierra - 2.0.0')
+
+title('Documentation | Sierra - 2.2.0')
 
 # writeWA("\n"r'<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">')
 # writeWA("\n"r'<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>')
@@ -27,7 +28,7 @@ addFont("https://fonts.googleapis.com/css2?family=Oswald&display=swap")
 addFont("https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap")
 addFont("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&display=swap")
 
-with image('white_sierra.JPG', href="https://github.com/BrainStormYourWayIn/sierra", alt='Sierra') as i:
+with image('white_sierra.JPG', attr='href="https://github.com/BrainStormYourWayIn/sierra", alt="Sierra"') as i:
     i.show()
     i.css(margin_left='35%')
 
@@ -45,7 +46,7 @@ with div(None, attr="id='first_up'"):
     as an alternative to jinja or any other templating engine if you're developing web applications sans JS, since Sierra 
     doesn't have support for JS and even for very advaced usage (as of yet). This is relatively new, so features are being added at a quick pace. 
     If you have any specific requests, open a discussion/issue on our <a href="https://github.com/BrainStormYourWayIn/sierra">GitHub page</a>. 
-    Any contributions can also be made there. {br}''')
+    Any contributions can also be made there. <br>''')
     
     p(f'''Please read our <a href="https://github.com/BrainStormYourWayIn/sierra/blob/main/LICENSE">LICENSE</a> before moving forward''')
 
@@ -64,7 +65,7 @@ with div(None, "id='starting_off'"):
 
     writeWA("\n<code>pip install sierra</code>")
     p(f'''can be done as an easier way of installing. You can see the README on the GitHub page for the <code> pip install git+git</code> method.
-    {br}{br}
+    <br><br>
     To import the library, simply use''')
     writeWA("\n<code>from sierra import *</code>")
     p("Once imported, the first line of syntax is mandatory: ")
@@ -82,7 +83,7 @@ with div(None, "id='starting_off'"):
 
     p(f'''You can add a header with <code>head()</code>. Of the arguments, either <code>type</code> or 
     <code>font_size</code> must be entered. Using both results in preference to <code>arg font_size</code> by CSS by default. 
-    {br}Start the body of the web application with <code>openBody()</code>''')
+    <br>Start the body of the web application with <code>openBody()</code>''')
 
     with open_tag('pre'):
         writeWA(f'''
@@ -119,7 +120,7 @@ with div(None, "id='starting_off'"):
 
     p(f'''You may notice styling is a bit complicated with <code>head()</code> and <code>openBody()</code>, 
     but this method only applies to these tags. Styling gets much easier, especially with <code>.css()</code> and 
-    <code>writeCSS()</code> or <code>writeCSS_raw()</code> for custom styling arguments. {br}''')
+    <code>writeCSS()</code> or <code>writeCSS_raw()</code> for custom styling arguments. <br>''')
     p(f'''Fonts can be added with <code>addFont()</code> which takes only one argument, which is the link to the font.''')
     with open_tag('pre'):
         writeWA(f'''
@@ -155,7 +156,7 @@ with div(None, attr="id='tags'"):
         #  ---  Any content  ---  
 
         ''')
-    p(f'''Coming out of <code>with</code> automatically closes the tag {br}
+    p(f'''Coming out of <code>with</code> automatically closes the tag <br>
     <code>attr=None</code>, which is the second argument in <code>open_tag()</code>, enables the user
     to add attributes to their HTML tag.''')
     with open_tag('pre'):
@@ -437,7 +438,7 @@ with div(None, attr="id='des_lists'"):
     <code>[['py', 'py1'], ['- PEP', '- PEP8']]</code> is the second. These two are separated by commas and 
     are subsets of a list that contains them both. The attribute <code>id='d_list'</code> was added to the 
     description list, and CSS was added to the id with <code>writeCSS()</code>. 
-    {br}So get careful with the list arrangement!''')
+    <br>So get careful with the list arrangement!''')
 
 with div(None, attr="id='other_funcs'"):
     with open_tag('pg_title'):
@@ -445,7 +446,7 @@ with div(None, attr="id='other_funcs'"):
 
     p(f'''Python functions/variables or anything can be added onto the web application using Sierra with much 
     ease. However keep in mind, that every function/CSS/tag, or anything that is to be added to the HTML must 
-    come only after <code>title()</code> {br}Here's a list of other functions you can use with Sierra: ''')
+    come only after <code>title()</code> <br>Here's a list of other functions you can use with Sierra: ''')
     with open_tag('pre'):
         writeWA(r'''
         
