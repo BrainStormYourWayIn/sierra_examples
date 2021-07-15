@@ -1,7 +1,7 @@
 from sierra import *
 
 
-title('Documentation | Sierra - 2.2.0')
+title('Documentation | Sierra - 2.3.0')
 
 # writeWA("\n"r'<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">')
 # writeWA("\n"r'<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>')
@@ -32,7 +32,7 @@ with image(src='white_sierra.JPG', attr='href="https://github.com/BrainStormYour
     i.show()
     i.css(margin_left='35%')
 
-head('Documentation - Sierra v2.2.0', 'h1', font_family="'Titillium Web', sans-serif", 
+head('Documentation - Sierra v2.3.0', 'h1', font_family="'Titillium Web', sans-serif", 
     color="#1d37e0")
 
 openBody()
@@ -489,13 +489,6 @@ with div(None, attr="id='other_funcs'"):
     # Use this at the end of all development outside all context managers. Using it inside or at a working 
     # stage will not work well
     # You can use this to avoid using closeHTML() and closeBody()
-
-
-    var br
-    # 'br' is a variable that stands for the HTML tag &lt;br>. You can use this within f-strings 
-    # or any place else to break lines. Avoid using it to name another variable, since this will cause 
-    # conflict. If used, define another variable for breaking or just use &lt;br> as a regular HTML tag. (See writeWA())
-
 
         
         ''')
