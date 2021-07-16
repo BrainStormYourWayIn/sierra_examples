@@ -3,10 +3,6 @@ from sierra import *
 
 title('Documentation | Sierra - 2.2.0')
 
-# writeWA("\n"r'<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">')
-# writeWA("\n"r'<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>')
-# writeWA("\n"r'<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>')
-
 
 ### CSS ###
 
@@ -40,8 +36,9 @@ openBody()
 with div(None, attr="id='first_up'"):
 
     p(
-    f'''Wecome to the documentation of Sierra - Sierra is a Python native engine for Web Development, which makes integration with the backend faster, as well as 
-    have full control on your frontend. You can now develop your web application purely in Python, taking full advantage of its powerful functionalities.  
+    f'''Wecome to the documentation of Sierra - A Python native engine for frontend development, which makes templating for the backend faster, 
+    as well as have full control on your frontend. You can now develop your web application purely in Python, taking full advantage of its powerful 
+    functionalities with simple and elegant syntax.   
     You can use this along with a templating engine, or use it standalone - even without a web framework, if you like. This is recommended to use 
     as an alternative to jinja or any other templating engine if you're developing web applications sans JS, since Sierra 
     doesn't have support for JS and even for very advaced usage (as of yet). This is relatively new, so features are being added at a quick pace. 
